@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component, Fragment } from 'react';
 import './App.css';
+import community from '../components/community';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.status = {
+      comm: "",
+      threads: []
+    }
+  }
+
+  onClick = (event) => {
+    this.setState({comm: event.target.id});
+  }
+
+  render() {
+    if (true) {
+      return (
+        <Fragment>
+          <community click={this.onClick} />
+        </Fragment>
+      );
+    }
+    else {
+      
+    }
+  }
 }
 
 export default App;
