@@ -1,13 +1,13 @@
 import React from 'react';
-import {CommunityList} from './CommunityList';
 
-const community = ({click}) => {
-    return (
-       <div>Hi</div>
-        // <div>
-        //     {CommunityList.map((comm, i) => <p>{comm[i].id}</p>)}
-        // </div>
+function Community({cId, click}) {
+    return(
+        <span style={{padding: "6px"}}>
+           <button id={cId} type='button' onClick={click}>
+               {cId}
+           </button> 
+        </span>
     );
 }
 
-export default community;
+export default Community;
