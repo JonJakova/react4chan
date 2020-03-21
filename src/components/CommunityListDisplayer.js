@@ -9,6 +9,7 @@ function CommunityListDisplayer({click}) {
                return(
                    <Community 
                        key={comm.id}
+                       cName={comm.name}
                        cId={comm.id}
                        click={click}
                    />

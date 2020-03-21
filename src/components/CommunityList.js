@@ -11,6 +11,6 @@ export const CommunityList = [
 
     {
         id: 'qa',
-        name: 'question & answer'
+        name: 'qa'
     }
 ]

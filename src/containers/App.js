@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import './App.css';
 import CommunityListDisplayer from '../components/CommunityListDisplayer';
 import { CommunityList } from '../components/CommunityList';
-import {Random} from '../components/Threads/Random';
+import {threadDatabase} from '../components/threadDatabase';
 import ThreadList from '../threadList';
 
 class App extends Component {
@@ -15,12 +15,10 @@ class App extends Component {
   }
 
   onClick = (event) => {
-    const threadsFromJSON = Random;
-    console.log(threadsFromJSON);
-    
+    const targetValue = event.target.id;
     this.setState(
-      { comm: event.target.id,
-      threads: threadsFromJSON}
+      { comm: targetValue,
+        threads: threadDatabase[targetValue]}
     );
   }
 
